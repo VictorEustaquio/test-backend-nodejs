@@ -1,0 +1,46 @@
+{
+  "name": "mvc-exemplo-nodejs",
+  "version": "1.0.0",
+  "description": "AnotaAi",
+  "main": "./src/server/index.js",
+  "private": true,
+  "scripts": {
+    "prod": "cross-env NODE_ENV=production node --trace-warnings ./src/server/index.js",
+    "dev": "cross-env NODE_ENV=development nodemon --trace-warnings ./src/server/index.js",
+    "pretest": "cross-env NODE_ENV=test node --trace-warnings ./__tests__/pretest.js",
+    "test": "jest",
+    "posttest": "cross-env NODE_ENV=test node --trace-warnings ./__tests__/posttest.js"
+  },
+  "author": "Victor Vinícius Eustáquio de Almeida",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "bcryptjs": "^2.4.3",
+    "connect-redis": "^6.1.1",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "express-jwt": "^6.1.1",
+    "express-session": "^1.17.2",
+    "hbs": "^4.2.0",
+    "helmet": "^5.0.2",
+    "http-errors": "^2.0.0",
+    "ioredis": "^4.28.5",
+    "joi-objectid": "^4.0.2",
+    "joiptbr": "^1.0.1",
+    "json-keys-sort": "^2.1.0",
+    "jsonwebtoken": "^8.5.1",
+    "method-override": "^3.0.0",
+    "moment": "^2.29.1",
+    "mongoose": "^6.2.4",
+    "node-redis-retry-strategy": "^2.1.1"
+  },
+  "devDependencies": {
+    "jest": "^27.5.1",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.15",
+    "supertest": "^6.2.2"
+  }
+}
